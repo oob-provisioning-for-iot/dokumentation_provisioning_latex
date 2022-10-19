@@ -1,0 +1,57 @@
+\documentclass[
+    oneside,
+    fontsize=13pt,          % default font size 12pt
+    paper=a4,               % DIN A4 page format
+    numbers=noenddot,       % remove dots behind chapter numbers (e.g. 1.5 not 1.5.)
+    listof=totoc,           % add list of figures, tables, etc. to ToC
+    listof=entryprefix,     % add entry name to figures, tables, etc.
+    listof=nochaptergap,    % no chapter gap for figures, tables, etc.
+    bibliography=totoc,     % add bibliography to ToC but without a chapter number
+    % parskip=half            % half line spacing between paragraphs
+]{scrbook}
+
+\include{preamble}                      % load preamble
+
+\begin{document}
+
+\include{framework/titlepage}           % title page
+
+% Roman numbering
+\frontmatter
+\pagenumbering{Roman}
+
+% \include{framework/einleitung}
+\renewcommand*\contentsname{Inhaltsverzeichnis}            % Abstract
+\tableofcontents                                            % Contents
+\renewcommand{\figurename}{Abbildung}
+\renewcommand{\bibname}{Quellenverzeichnis}
+
+% Content
+\mainmatter
+\include{content/1_introduction}
+\include{content/2_chapter_1}
+\include{content/4_kritische_bewertung}
+\include{content/5_conclusion}
+
+\renewcommand{\listfigurename}{Abbildungsverzeichnis}
+\listoffigures                          % List of Figures
+%\listoftables                           % List of Tables
+%\lstlistoflistings                      % List of Code Listings
+%\include{framework/abbreviat{UndNochEinZitat}ions}       % Abbreviations
+% \include{framework/quellen_angabe}
+\begin{thebibliography}{999}
+\bibitem{[1]}{Mediapipe: }\url{https://mediapipe.dev/}
+\bibitem{[2]}{Trello: }\url{https://trello.com/}
+\end{thebibliography}
+
+
+% Bibliography
+\begin{singlespace}
+    \printbibliography
+\end{singlespace}
+
+% Declaration of Authorship (in German)
+\include{framework/declaration_of_authorship}   
+
+
+\end{document}
