@@ -6,7 +6,7 @@ on:
     branches:
       - main
     paths:
-      - ".github/workflows/*"
+      - ".github/workflows/docs-markdown.yml"
       - "docs/**"
 jobs:
   build_markdown_documentation:
