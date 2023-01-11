@@ -793,7 +793,11 @@ git push
 <li>Das zugehörige Skript ausführen: <code>/home/script/automaticcloud.sh</code></li>
 <li>Eingabeaufforderung befolgen</li>
 <li>Der Fingerprint wird in der Konsole ausgegeben</li>
-</ol></section><h1 class='nav-section-title-end'>Ended: Team device</h1></div>
+</ol>
+<h2 id="team_device-pfc200-auto_confsh">auto_conf.sh</h2>
+<ul>
+<li>Konfiguriert die /etc/dataagent/dataagent.config auf dem Gerät entsprechend der Eingaben. Die Einstellungen werden erst als Flag mit - benannt und dann wird der Wert hierzu angegeben (z.B. -Enabled true). Das Skript prüft automatisch ob die Eingabe Sinn macht ( z.B. prüft ob Eingabe Boolean ist) und gibt im Problemfall aus welche Eingabe nicht erlaubt ist. Optionen welche nicht als Flag angegeben wurden werden automatisch geleert.</li>
+</ul></section><h1 class='nav-section-title-end'>Ended: Team device</h1></div>
 
 
 
